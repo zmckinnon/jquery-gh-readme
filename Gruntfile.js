@@ -11,13 +11,22 @@ module.exports = function(grunt) {
         src: 'jquery.gh-readme.js',
         dest: 'jquery.gh-readme.min.js'
       }
+    },
+    mocha: {
+      test: {
+        src: [ 'tests/**/*.html' ],
+        options: {
+          run: true
+        }
+      }
     }
   });
 
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-mocha');
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify']);
+  grunt.registerTask('default', ['uglify', 'mocha']);
 
 };

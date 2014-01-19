@@ -48,6 +48,7 @@
 	}
 
 	$.fn.readme = function (options) {
+		var deferred = new $.Deferred();
 		var self = this;
 		var owner = options.owner;
 		var repo = options.repo;
@@ -55,7 +56,9 @@
 			var markdownToConvert = decodeBase64(response.content);
 			var html = convertMarkdown(markdownToConvert);
 			$(self).html(html);
+			deferred.resolve();
 		});
+		return deferred.promise();
 	};
 
 })(jQuery);
