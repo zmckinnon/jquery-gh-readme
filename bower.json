@@ -1,0 +1,26 @@
+{
+  "name": "jquery-gh-readme",
+  "version": "0.0.1",
+  "homepage": "https://github.com/mcksoftware/jquery-gh-readme",
+  "authors": [
+    "MCKSoftware, Inc."
+  ],
+  "description": "A jQuery plugin for rendering a readme.md in Github file as html.",
+  "main": "./jquery.gh-readme.js",
+  "keywords": [
+    "github",
+    "readme",
+    "jquery",
+    "plugin"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "examples",
+    "Gruntfile.js"
+  ]
+}
