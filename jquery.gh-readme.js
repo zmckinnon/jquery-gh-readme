@@ -44,7 +44,7 @@
 	}
 
 	function convertMarkdown(markdownToConvert) {
-		return markdown.toHTML(markdownToConvert);
+		return marked(markdownToConvert);
 	}
 
 	$.fn.readme = function (options) {

@@ -24,7 +24,7 @@
   "homepage": "https://github.com/mcksoftware/jquery-gh-readme",
   "dependencies": {
     "jquery": "~2.1.0-rc1",
-    "markdown": "~0.5.0"
+    "marked": "~0.3.0"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
