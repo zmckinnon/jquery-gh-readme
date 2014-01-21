@@ -3,7 +3,7 @@ describe('jQuery.gh-readme', function () {
 	beforeEach(function (done) {
 		$('<div id="readme"></div>').appendTo('body');
 		var options = {
-			owner: 'mcksoftware',
+			owner: 'zmckinnon',
 			repo: 'jquery-gh-readme'
 		};
 		jQuery.get = function (url, callback) { callback({ content: 'IyMgVGVzdCAxMjMgIyM=' }); };

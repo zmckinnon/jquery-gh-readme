@@ -1,4 +1,4 @@
-jquery.gh-readme [![Build Status](https://travis-ci.org/mcksoftware/jquery-gh-readme.png)](https://travis-ci.org/mcksoftware/jquery-gh-readme)
+jquery.gh-readme [![Build Status](https://travis-ci.org/zmckinnon/jquery-gh-readme.png)](https://travis-ci.org/zmckinnon/jquery-gh-readme)
 ================
 
 A jQuery plugin for rendering a readme.md in Github file as html.
@@ -10,7 +10,7 @@ A jQuery plugin for rendering a readme.md in Github file as html.
 ## Usage ##
 
 	var options = {
-		owner: 'mcksoftware',
+		owner: 'zmckinnon',
 		repo: 'jquery-gh-readme'
 	};
 	$('#readme').readme(options);
