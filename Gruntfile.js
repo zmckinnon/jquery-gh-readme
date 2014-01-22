@@ -3,13 +3,19 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    concat: {
+      dist: {
+        src: [ 'node_modules/marked/lib/marked.js', 'jquery.gh-readme.js' ],
+        dest: 'build/jquery.gh-readme.full.js'
+      }
+    },
     uglify: {
       options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+        banner: '/*! <%= pkg.name %> v<%= pkg.version %> */\n'
       },
       build: {
-        src: 'jquery.gh-readme.js',
-        dest: 'jquery.gh-readme.min.js'
+        src: 'build/jquery.gh-readme.full.js',
+        dest: 'build/jquery.gh-readme.min.js'
       }
     },
     mocha: {
@@ -22,11 +28,12 @@ module.exports = function(grunt) {
     }
   });
 
-  // Load the plugin that provides the "uglify" task.
+  // Load the plugins
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-mocha');
 
-  // Default task(s).
-  grunt.registerTask('default', ['uglify', 'mocha']);
+  // Default tasks
+  grunt.registerTask('default', ['concat', 'uglify', 'mocha']);
 
 };
