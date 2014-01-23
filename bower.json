@@ -6,7 +6,7 @@
     "MCKSoftware, Inc."
   ],
   "description": "A jQuery plugin for rendering a readme.md in Github file as html.",
-  "main": "./build/jquery.gh-readme.min.js",
+  "main": "./src/jquery.gh-readme.js",
   "keywords": [
     "github",
     "readme",

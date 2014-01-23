@@ -5,8 +5,8 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     concat: {
       dist: {
-        src: [ 'node_modules/marked/lib/marked.js', 'jquery.gh-readme.js' ],
-        dest: 'build/jquery.gh-readme.full.js'
+        src: [ 'node_modules/marked/lib/marked.js', 'src/jquery.gh-readme.js' ],
+        dest: 'dist/jquery.gh-readme.full.js'
       }
     },
     uglify: {
@@ -14,8 +14,8 @@ module.exports = function(grunt) {
         banner: '/*! <%= pkg.name %> v<%= pkg.version %> */\n'
       },
       build: {
-        src: 'build/jquery.gh-readme.full.js',
-        dest: 'build/jquery.gh-readme.min.js'
+        src: 'dist/jquery.gh-readme.full.js',
+        dest: 'dist/jquery.gh-readme.min.js'
       }
     },
     mocha: {
