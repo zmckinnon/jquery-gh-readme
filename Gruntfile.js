@@ -25,6 +25,16 @@ module.exports = function(grunt) {
           run: true
         }
       }
+    },
+    jshint: {
+      files: ['gruntfile.js', 'src/*.js', 'tests/**/*.js'],
+      options: {
+        globals: {
+          jQuery: true,
+          console: true,
+          module: true
+        }
+      }
     }
   });
 
@@ -32,8 +42,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-mocha');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
 
   // Default tasks
-  grunt.registerTask('default', ['concat', 'uglify', 'mocha']);
+  grunt.registerTask('default', ['concat', 'uglify', 'mocha', 'jshint']);
 
 };
