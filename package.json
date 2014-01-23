@@ -1,6 +1,6 @@
 {
   "name": "jquery-gh-readme",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A jQuery plugin for rendering a readme.md in Github file as html.",
   "main": "Gruntfile.js",
   "scripts": {
