@@ -53,10 +53,10 @@
 		var owner = options.owner;
 		var repo = options.repo;
 		var path = 'README.md';
- 		if (options.path != "") {
- 			path = options.path;
- 		}
- 		$.get('https://api.github.com/repos/' + owner + '/' + repo + '/contents/' + path, function (response) {
+		if (options.path !== "") {
+			path = options.path;
+		}
+		$.get('https://api.github.com/repos/' + owner + '/' + repo + '/contents/' + path, function (response) {
 			var markdownToConvert = decodeBase64(response.content);
 			var html = convertMarkdown(markdownToConvert);
 			$(self).html(html);
