@@ -52,8 +52,10 @@
 		var self = this;
 		var owner = options.owner;
 		var repo = options.repo;
-		$.get('https://api.github.com/repos/' + owner + '/' + repo + '/readme', function (response) {
-			var markdownToConvert = decodeBase64(response.content);
+		var branch = options.branch||'master';
+		var file = options.file||'/README.md';
+		$.get('https://raw.githubusercontent.com/' + owner + '/' + repo + '/' + branch + '' + file + '', function (response) {
+			var markdownToConvert = /*decodeBase64(*/response.content/*)*/;
 			var html = convertMarkdown(markdownToConvert);
 			$(self).html(html);
 			deferred.resolve();
