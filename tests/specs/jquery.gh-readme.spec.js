@@ -6,7 +6,7 @@ describe('jQuery.gh-readme', function () {
 			owner: 'zmckinnon',
 			repo: 'jquery-gh-readme'
 		};
-		jQuery.get = function (url, callback) { callback({ content: 'IyMgVGVzdCAxMjMgIyM=' }); };
+		jQuery.get = function (url, callback) { callback({ content: '## Test 123' }); };
 		$('#readme').readme(options).then(done);
 	});
 
