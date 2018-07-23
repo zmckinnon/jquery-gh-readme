@@ -15,8 +15,14 @@ A jQuery plugin for rendering a readme.md in Github file as html.
 	<script>
 		$(function () {
 			var options = {
+				//required
+				
 				owner: 'zmckinnon',
-				repo: 'jquery-gh-readme'
+				repo: 'jquery-gh-readme',
+				
+				//optional
+				branch: 'master',
+				file: '/README.md'
 			};
 			$('#readme').readme(options);
 		});
